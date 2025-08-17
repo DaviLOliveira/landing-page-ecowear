@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoWear - Moda Consciente</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">EcoWear</a>
+            <ul class="nav-list">
+                <li><a href="#features">Benefícios</a></li>
+                <li><a href="#testimonials">Depoimentos</a></li>
+                <li><a href="#cta-final">Contato</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Vista a mudança. Seja a mudança.</h1>
+                <p>Roupas de alta qualidade, feitas com tecidos sustentáveis para quem se importa com o planeta e com o estilo.</p>
+                <a href="#" class="cta-button">Conheça a Coleção</a>
+            </div>
+        </section>
+
+        <section id="features" class="hidden">
+            <h2>Por que escolher a EcoWear?</h2>
+            <div class="features-container">
+                <article class="feature-item">
+                    <i class="fas fa-leaf fa-2x"></i>
+                    <h3>Tecidos Orgânicos</h3>
+                    <p>Algodão 100% orgânico, livre de pesticidas e que respeita o solo.</p>
+                </article>
+                <article class="feature-item">
+                    <i class="fas fa-hands-holding-circle fa-2x"></i>
+                    <h3>Produção Ética</h3>
+                    <p>Garantimos condições de trabalho justas e seguras para todos os nossos colaboradores.</p>
+                </article>
+                <article class="feature-item">
+                    <i class="fas fa-seedling fa-2x"></i>
+                    <h3>Menos Impacto</h3>
+                    <p>Processos que utilizam menos água e geram menos resíduos. O planeta agradece.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="testimonials" class="hidden">
+            <h2>O que nossos clientes dizem</h2>
+            <div class="testimonials-container">
+                <blockquote class="testimonial">
+                    <p>"Finalmente encontrei roupas que são lindas e que eu me sinto bem em usar. A qualidade é incrível!"</p>
+                    <cite>- Ana P., São Paulo</cite>
+                </blockquote>
+                <blockquote class="testimonial">
+                    <p>"Comprar na EcoWear é um ato de consciência. Virou minha marca favorita!"</p>
+                    <cite>- Marcos L., Rio de Janeiro</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <section id="gallery" class="hidden">
+            <h2>Nossa Coleção</h2>
+            <p class="gallery-subtitle">Peças criadas com propósito, para durar e inspirar.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/produto1.jpg" alt="Camisa de algodão orgânico">
+                    <div class="gallery-item-info">
+                        <h3>Camisa Algodão Orgânico</h3>
+                        <span>R$ 129,90</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/produto2.jpg" alt="Calça de linho sustentável">
+                        <h3>Calça de Linho</h3>
+                        <span>R$ 189,90</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/produto3.jpg" alt="Calça de tecido reciclavél">
+                     <div class="gallery-item-info">
+                        <h3>Calça de alfaiataria</h3>
+                        <span>R$ 219,90</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                   <img src="images/produto4.jpg" alt="Camiseta de algodão reciclada">
+                     <div class="gallery-item-info">
+                        <h3>Camiseta reciclada</h3>
+                        <span>R$ 99,90</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-final" class="hidden">
+            <h2>Faça parte do movimento.</h2>
+            <p>Inscreva-se na nossa newsletter e ganhe 15% de desconto na sua primeira compra.</p>
+            <form>
+                <input type="email" placeholder="Seu melhor e-mail">
+                <button type="submit">Quero meu desconto!</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> EcoWear. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
