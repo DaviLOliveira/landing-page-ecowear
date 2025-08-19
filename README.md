@@ -17,7 +17,6 @@ O site apresenta a marca, seus diferenciais, uma galeria de produtos e um rodap�
 * **Seção Hero "Split Screen":** Um layout dividido e impactante para a seção de boas-vindas.
 * **Animações de Scroll:** Elementos da página surgem suavemente com animações conforme o usuário rola a página, utilizando a API `IntersectionObserver`.
 * **Componentes Modernos:** Cards, galeria de produtos em grid e um rodapé informativo e bem estruturado.
-* **Código Comentado:** Todo o código HTML, CSS e JavaScript foi documentado para facilitar o entendimento e a manutenção.
 
 ---
 
