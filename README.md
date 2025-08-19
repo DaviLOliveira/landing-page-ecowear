@@ -1,6 +1,5 @@
 #  EcoWear - Landing Page de E-commerce Sustentável 🌿
 
-![Prévia do Site EcoWear](https://i.imgur.com/vH9v0uM.png)
 
 ## 📄 Sobre o Projeto
 
@@ -8,7 +7,6 @@
 
 O site apresenta a marca, seus diferenciais, uma galeria de produtos e um rodapé completo com informações de contato e redes sociais, tudo em uma única página fluida e elegante.
 
-🔗 **Veja o projeto no ar:** `https://www.google.com/search?q=https://daviloliveira.github.io/landing-page-ecowear/`
 
 ---
 
@@ -42,7 +40,7 @@ Para visualizar o projeto em sua máquina, siga os passos abaixo:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/SEU-USUARIO/landing-page-ecowear.git](https://github.com/SEU-USUARIO/landing-page-ecowear.git)
+    git clone [https://github.com/DaviLOliveira/landing-page-ecowear.git](https://github.com/DaviLOliveira/landing-page-ecowear.git)
     ```
 
 2.  **Navegue até a pasta do projeto:**
@@ -51,5 +49,3 @@ Para visualizar o projeto em sua máquina, siga os passos abaixo:
     ```
 
 3.  **Abra o arquivo `index.html`** no seu navegador de preferência. Para uma melhor experiência de desenvolvimento, recomendo a extensão [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) do VS Code.
-
----
