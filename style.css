@@ -1,115 +1,178 @@
+/* ================================================================
+   ARQUIVO STYLE.CSS COMPLETO E CORRIGIDO - PROJETO ECOWEAR
+   ================================================================ */
+
+/* 1. Variáveis Globais e Reset */
 :root {
-    --cor-primaria: #2C5F2D;      /* Verde escuro principal */
-    --cor-secundaria: #97BC62;    /* Verde claro para destaques e botões */
-    --cor-fundo: #F7F7F7;         /* Cinza bem claro para o fundo da página */
-    --cor-texto: #333333;         /* Cinza escuro para textos, mais suave que preto puro */
-    --cor-branco: #FFFFFF;        /* Branco */
-    --fonte-titulos: 'Montserrat', sans-serif; /* Fonte para todos os títulos */
-    --fonte-corpo: 'Lato', sans-serif;       /* Fonte para o texto principal */
+    --cor-primaria: #2C5F2D;
+    --cor-secundaria: #97BC62;
+    --cor-fundo: #F7F7F7;
+    --cor-texto: #333333;
+    --cor-branco: #FFFFFF;
+    --fonte-titulos: 'Montserrat', sans-serif;
+    --fonte-corpo: 'Lato', sans-serif;
 }
 
 * {
-    margin: 0;  /* Remove todas as margens externas */
-    padding: 0; /* Remove todos os preenchimentos internos */
-    box-sizing: border-box; /* Muda o cálculo do tamanho total do elemento para incluir padding e border */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* 2. Estilos de Base */
 body {
-    font-family: var(--fonte-corpo);      /* Usa a variável de fonte que definimos */
-    background-color: var(--cor-fundo); /* Usa a variável de cor de fundo */
-    color: var(--cor-texto);              /* Define a cor padrão do texto */
-    line-height: 1.6;                     /* Aumenta o espaçamento entre linhas para melhor legibilidade */
+    font-family: var(--fonte-corpo);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
 }
 
-/* Aplica a fonte de títulos para todas as tags de cabeçalho e para a classe .logo */
 h1, h2, h3, .logo {
     font-family: var(--fonte-titulos);
 }
 
-/* Estilos padrão para links (tags <a>) */
 a {
-    text-decoration: none;         /* Remove o sublinhado padrão dos links */
-    color: var(--cor-primaria);    /* Define a cor padrão dos links */
+    text-decoration: none;
+    color: var(--cor-primaria);
 }
 
-/* Remove os marcadores (bolinhas) das listas não ordenadas (<ul>) */
 ul {
     list-style: none;
 }
 
+/* 3. Cabeçalho */
 header {
     background-color: var(--cor-branco);
-    padding: 1rem 5%;  /* Espaçamento interno (1rem em cima/baixo, 5% dos lados) */
-    display: flex;     /* Ativa o layout Flexbox para alinhar os itens internos */
-    justify-content: space-between; /* Coloca espaço máximo entre os itens (logo na esquerda, nav na direita) */
-    align-items: center;            /* Alinha os itens verticalmente ao centro */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adiciona uma sombra sutil abaixo do header */
-    position: sticky;  /* Faz o header "grudar" no topo da tela ao rolar a página */
-    top: 0;            /* Define que ele deve grudar no topo (posição 0) */
-    height: 8vh;       /* Define a altura como 8% da altura da janela (viewport height) */
-    z-index: 1000;     /* Garante que o header fique na frente de outros elementos da página */
+    padding: 0 5%; /* Padding alterado para 0 em cima/baixo pois a altura controla */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    height: 8vh;
+    z-index: 1000;
+    display: flex; /* Adicionado para centralizar o nav */
+    align-items: center; /* Adicionado para centralizar o nav */
 }
 
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
-/* Estiliza a lista de links dentro da navegação do header */
-header nav ul {
-    display: flex; /* Alinha os itens da lista (os links) lado a lado */
-    gap: 1.5rem;   /* Cria um espaçamento de 1.5rem entre cada link */
+header .logo img {
+    height: 90px;
+    width: auto;
 }
 
-/* Efeito 'hover' para quando o mouse passa por cima dos links do menu */
-header nav ul a:hover {
-    color: var(--cor-secundaria); /* Muda a cor do texto */
-    font-weight: bold;
+/* 4. Seção Hero */
+#hero {
+    display: flex;
+    min-height: 70vh; /* <<== CONTROLE A ALTURA AQUI */
+    padding: 0;
+    background-color: var(--cor-fundo);
 }
 
-/* Estilos gerais aplicados a todas as tags <section> */
+.hero-text {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 5%;
+}
+
+.hero-text .hero-content {
+    max-width: 500px;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 3.2rem;
+    color: var(--cor-primaria);
+    line-height: 1.2;
+}
+
+.hero-text p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.hero-text .cta-button {
+    margin-top: 2rem;
+}
+
+.hero-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+/* 5. Seções Gerais */
 section {
-    padding: 4rem 5%; /* Espaçamento interno generoso para separar o conteúdo */
+    padding: 4rem 5%;
+}
+
+section:not(#hero){
     text-align: center;
 }
 
-/* Estilos para os títulos <h2> dentro das seções */
 section h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: var(--cor-primaria);
 }
 
-/* Estilos para a seção principal de apresentação (Hero) */
-#hero {
-    background-image: url('...'); /* Define a imagem de fundo */
-    background-size: cover;      /* Faz a imagem cobrir toda a área da seção sem distorcer */
-    background-position: center; /* Centraliza a imagem */
-    color: var(--cor-branco);
-    display: flex;               /* Usa flexbox para centralizar o conteúdo interno */
-    align-items: center;         /* Alinha verticalmente */
-    justify-content: center;     /* Alinha horizontalmente */
-    min-height: 60vh;            /* Garante uma altura mínima para a seção */
+/* 6. Galeria e Outras Seções */
+#gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
 }
 
-/* Caixa de conteúdo dentro da seção Hero */
-#hero .hero-content {
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto semitransparente para dar contraste e legibilidade ao texto */
-    max-width: 600px; /* Largura máxima da caixa de conteúdo */
-    margin: 0 auto;   /* Centraliza a caixa na horizontal */
-    padding: 2rem;
+#gallery .gallery-item {
+    background-color: var(--cor-branco);
     border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-/* ... Estilos para os textos e botão da seção Hero ... */
+#gallery .gallery-item:hover {
+    transform: translateY(-5px);
+}
 
-/* Estilos para a seção de benefícios (Features) */
+#gallery .gallery-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+#gallery .gallery-item-info {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+#gallery .gallery-item-info h3 { margin-bottom: 0.25rem; font-size: 1.1rem; }
+#gallery .gallery-item-info span { font-weight: bold; color: var(--cor-primaria); font-size: 1.2rem; }
+
 .features-container, .testimonials-container {
-    display: flex;          /* Alinha os cards lado a lado */
+    display: flex;
     justify-content: center;
     gap: 2rem;
-    flex-wrap: wrap;        /* Permite que os cards quebrem para a linha de baixo em telas menores */
-    align-items: stretch;   /* Força todos os cards na mesma linha a terem a mesma altura */
+    flex-wrap: wrap;
+    align-items: stretch;
 }
 
 .feature-item, .testimonial {
@@ -117,35 +180,34 @@ section h2 {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    flex-basis: 300px;   /* Define uma largura base para cada card */
-    display: flex;       /* Transforma o card em um container flexível... */
-    flex-direction: column; /* ...para organizar seu conteúdo interno na vertical */
+    flex-basis: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
-.feature-item p, .testimonial p {
-    flex-grow: 1; /* Faz o parágrafo "crescer" e ocupar o espaço vazio, alinhando o conteúdo de todos os cards */
-}
+.feature-item p, .testimonial p { flex-grow: 1; }
+.feature-item i { color: var(--cor-secundaria); margin-bottom: 1rem; }
+.testimonial { border-left: 5px solid var(--cor-secundaria); }
+.testimonial p { font-style: italic; margin-bottom: 1rem; }
 
-/* Estado inicial (escondido) dos elementos que serão animados pelo JavaScript */
+/* 7. Animações e Menu Mobile */
 .hidden {
-    opacity: 0;                 /* Começa totalmente transparente */
-    transition: all 1s;         /* A animação de transição dura 1 segundo */
-    transform: translateX(-100px); /* Começa 100px para a esquerda, fora da posição final */
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(-100px);
 }
 
-/* Estado final (visível) dos elementos animados */
 .show {
-    opacity: 1;                 /* Fica totalmente visível */
-    transform: translateX(0);   /* Volta para sua posição original */
+    opacity: 1;
+    transform: translateX(0);
 }
 
-/* Ícone do menu hambúrguer (escondido por padrão em telas grandes) */
 .mobile-menu {
-    display: none;
+    display: block;
     cursor: pointer;
 }
 
-/* Linhas que formam o ícone do hambúrguer */
 .mobile-menu div {
     width: 32px;
     height: 2px;
@@ -154,61 +216,70 @@ section h2 {
     transition: 0.3s;
 }
 
-/* Animação de entrada dos links no menu mobile */
 @keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
-/* Animação que transforma o ícone hambúrguer em um "X" quando o menu está ativo */
-.mobile-menu.active .line1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
-}
-.mobile-menu.active .line2 {
-    opacity: 0;
-}
-.mobile-menu.active .line3 {
-    transform: rotate(45deg) translate(-5px, -7px);
+.mobile-menu.active .line1 { transform: rotate(-45deg) translate(-8px, 8px); }
+.mobile-menu.active .line2 { opacity: 0; }
+.mobile-menu.active .line3 { transform: rotate(45deg) translate(-5px, -7px); }
+
+.nav-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinhado ao centro para melhor visual */
+    justify-content: center; /* Alinhado ao centro para melhor visual */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: -5px 0px 15px rgba(0,0,0,0.1);
 }
 
+.nav-list.active { transform: translateX(0); }
+.nav-list li { opacity: 0; }
+.nav-list a { font-size: 1.5rem; }
+
+/* 8. Footer */
+footer {
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
+    padding: 4rem 5% 0;
+    text-align: left;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #555;
+}
+
+/* ... (restante dos estilos do footer, que já estavam corretos) ... */
+.footer-col h3 { color: var(--cor-branco); margin-bottom: 1rem; }
+.footer-col p { margin-bottom: 1rem; line-height: 1.7; }
+.footer-form input { width: 100%; padding: 0.8rem; border: none; border-radius: 5px; margin-bottom: 0.5rem; }
+.footer-form button { width: 100%; padding: 0.8rem; border: none; border-radius: 5px; background-color: var(--cor-primaria); color: var(--cor-branco); font-weight: bold; cursor: pointer; transition: background-color 0.3s; }
+.footer-form button:hover { background-color: var(--cor-secundaria); }
+.social-links a { color: var(--cor-fundo); font-size: 1.5rem; margin-right: 1rem; transition: color 0.3s; }
+.social-links a:hover { color: var(--cor-secundaria); }
+.footer-bottom { text-align: center; padding: 1.5rem 0; font-size: 0.9rem; }
+
+/* 9. Media Queries (Responsividade) */
 @media (max-width: 999px) {
-    .mobile-menu {
-        display: block; /* O ícone do menu hambúrguer se torna visível */
-    }
-    /* Estilos da lista de links quando em modo mobile (escondida fora da tela por padrão) */
-    .nav-list {
-        position: fixed;
-        top: 8vh;
-        right: 0;
-        width: 50vw;
-        height: 92vh;
-        background: var(--cor-branco);
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%); /* Joga o menu para fora da tela (para a direita) */
-        transition: transform 0.3s ease-in;
-    }
-    
-    .nav-list.active {
-        transform: translateX(0);
-    }
-
-    
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    #hero { flex-direction: column-reverse; min-height: auto; }
+    .hero-text { text-align: center; }
+    .hero-image { min-height: 50vh; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 600px) {
-    
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
+    .gallery-grid { grid-template-columns: 1fr; }
 }

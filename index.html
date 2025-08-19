@@ -16,7 +16,7 @@
 
     <header>
         <nav>
-            <a href="#" class="logo">EcoWear</a>
+            <a href="#" class="logo"><img src="images/logo.png" alt="Logo da EcoWear"></a>
             <ul class="nav-list">
                 <li><a href="#features">Benefícios</a></li>
                 <li><a href="#testimonials">Depoimentos</a></li>
@@ -32,13 +32,19 @@
 
     <main>
         <section id="hero">
-            <div class="hero-content">
-                <h1>Vista a mudança. Seja a mudança.</h1>
-                <p>Roupas de alta qualidade, feitas com tecidos sustentáveis para quem se importa com o planeta e com o estilo.</p>
-                <a href="#" class="cta-button">Conheça a Coleção</a>
-            </div>
-        </section>
+    <div class="hero-text">
+        <div class="hero-content">
+            <h1>Vista a mudança. Seja a mudança.</h1>
+            <p>Roupas de alta qualidade, feitas com tecidos sustentáveis para quem se importa com o planeta e com o estilo.</p>
+            <a href="#" class="cta-button">Conheça a Coleção</a>
+        </div>
+    </div>
 
+    <div class="hero-image">
+    <img src="images/hero-image.jpg" alt="Modelo vestindo roupa EcoWear com estilo sustentável">
+    </div>
+
+</section>
         <section id="features" class="hidden">
             <h2>Por que escolher a EcoWear?</h2>
             <div class="features-container">
@@ -86,7 +92,8 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/produto2.jpg" alt="Calça de linho sustentável">
+                    <img src="images/produto2.jpg" alt="Calça de linho sustentável" class="gallery-item-ajuste">
+                    <div class="gallery-item-info">
                         <h3>Calça de Linho</h3>
                         <span>R$ 189,90</span>
                     </div>
@@ -108,23 +115,43 @@
             </div>
         </section>
 
-        <section id="cta-final" class="hidden">
-            <h2>Faça parte do movimento.</h2>
-            <p>Inscreva-se na nossa newsletter e ganhe 15% de desconto na sua primeira compra.</p>
-            <form>
-                <input type="email" placeholder="Seu melhor e-mail">
-                <button type="submit">Quero meu desconto!</button>
-            </form>
-        </section>
-    </main>
+        <footer>
+    <div class="footer-content">
 
-    <footer>
-        <p>&copy; <span id="year"></span> EcoWear. Todos os direitos reservados.</p>
-    </footer>
+        <div class="footer-col">
+            <h3>EcoWear</h3>
+            <p>Vista a mudança. Moda consciente e de alta qualidade para um futuro mais sustentável.</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Faça parte do movimento</h3>
+            <p>Receba novidades e 15% de desconto na primeira compra.</p>
+            <form class="footer-form">
+                <input type="email" placeholder="Seu melhor e-mail">
+                <button type="submit">Inscrever</button>
+            </form>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contato</h3>
+            <p>contato@ecowear.com<br>(31) 99140-4571</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; <span id="year-footer"></span> EcoWear. Todos os direitos reservados.</p>
+    </div>
+</footer>
 
     <script src="script.js" defer></script>
     <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('year-footer').textContent = new Date().getFullYear();
     </script>
 
 </body>
