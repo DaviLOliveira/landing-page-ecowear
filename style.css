@@ -1,7 +1,3 @@
-/* ================================================================
-   ARQUIVO STYLE.CSS COMPLETO E CORRIGIDO - PROJETO ECOWEAR
-   ================================================================ */
-
 /* 1. Variáveis Globais e Reset */
 :root {
     --cor-primaria: #2C5F2D;
@@ -262,7 +258,6 @@ footer {
     border-bottom: 1px solid #555;
 }
 
-/* ... (restante dos estilos do footer, que já estavam corretos) ... */
 .footer-col h3 { color: var(--cor-branco); margin-bottom: 1rem; }
 .footer-col p { margin-bottom: 1rem; line-height: 1.7; }
 .footer-form input { width: 100%; padding: 0.8rem; border: none; border-radius: 5px; margin-bottom: 0.5rem; }
